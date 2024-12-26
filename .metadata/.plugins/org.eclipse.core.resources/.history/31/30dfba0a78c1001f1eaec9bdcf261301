@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden; /* Ensure the body doesn't overflow */
+        }
+        .table-container {
+            width: 80%;
+            height: 80vh; /* Set a fixed height for the container */
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow-y: auto; /* Add vertical scroll bar */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            position: -webkit-sticky; /* For Safari */
+            position: sticky;
+            top: 0;
+            z-index: 1; /* Ensure the header is above other content */
+        }
+        .delete-button {
+            background-color: #FF0000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .delete-button:hover {
+            background-color: #cc0000;
+        }
+    </style>
+</head>
+<body>
+    <div class="table-container">
+        <h2>Registered Users</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Password</th>
+                    <th>Contact Number</th>
+                    <th>Gender</th>
+                    <th>State</th>
+                    <th>Qualification</th>
+                    <th>Hobbies</th>
+                    <th>Address</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="registration : ${registrations}">
+                    <td th:text="${registration.id}"></td>
+                    <td th:text="${registration.name}"></td>
+                    <td th:text="${registration.password}"></td>
+                    <td th:text="${registration.mobilenumber}"></td>
+                    <td th:text="${registration.gender}"></td>
+                    <td th:text="${registration.state}"></td>
+                    <td th:text="${registration.qualification}"></td>
+                    <td th:text="${registration.hobbies}"></td>
+                    <td th:text="${registration.address}"></td>
+                    <td>
+                        <form th:action="@{/deletebyid}" method="post">
+                            <input type="hidden" name="id" th:value="${registration.id}">
+                            <button type="submit" class="delete-button">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

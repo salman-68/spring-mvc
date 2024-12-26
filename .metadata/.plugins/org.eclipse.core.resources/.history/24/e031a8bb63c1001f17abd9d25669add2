@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow-y: auto;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+        }
+        .container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-container {
+            margin-bottom: 20px;
+        }
+        .form-container input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: #0056b3;
+        }
+        .error-message {
+            color: red;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .details-container .detail-item {
+            margin: 10px 0;
+        }
+        .details-container .detail-item span {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Search by ID</h2>
+        <div class="form-container">
+           
+            <div th:if="${error}" class="error-message" th:text="${error}"></div>
+        </div>
+        <div th:if="${registration}" class="details-container">
+            <h3>Registration Details</h3>
+            <div class="detail-item"><span>ID:</span> <span th:text="${registration.id}"></span></div>
+            <div class="detail-item"><span>Name:</span> <span th:text="${registration.name}"></span></div>
+            <div class="detail-item"><span>Password:</span> <span th:text="${registration.password}"></span></div>
+            <div class="detail-item"><span>Contact Number:</span> <span th:text="${registration.mobilenumber}"></span></div>
+            <div class="detail-item"><span>Gender:</span> <span th:text="${registration.gender}"></span></div>
+            <div class="detail-item"><span>State:</span> <span th:text="${registration.state}"></span></div>
+            <div class="detail-item"><span>Qualification:</span> <span th:text="${registration.qualification}"></span></div>
+            <div class="detail-item"><span>Address:</span> <span th:text="${registration.address}"></span></div>
+        </div>
+    </div>
+</body>
+</html>

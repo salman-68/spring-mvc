@@ -1,0 +1,17 @@
+package com.sathya.springboot.project3.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+@Controller
+public class RegistrationController {
+@GetMapping("/Sathya")
+public String getform() {
+	return "Reg";
+}
+@PostMapping("saved") 
+public String sendData() {
+	return "sucess";
+}
+}

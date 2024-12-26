@@ -1,0 +1,10 @@
+package com.sathya.springboot.project1.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.sathya.springboot.project1.repo.EmployeeRepository;
+
+public class EmployeeService {
+@Autowired
+EmployeeRepository employeeRepository;
+}

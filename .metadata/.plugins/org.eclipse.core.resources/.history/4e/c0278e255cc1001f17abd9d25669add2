@@ -1,0 +1,76 @@
+/*package com.sathya.springboot.project3.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.sathya.springboot.project3.entity.RegistrationEnitity;
+import com.sathya.springboot.project3.model.RegistrationModel;
+import org.springframework.ui.Model;
+import com.sathya.springboot.project3.service.RegistrationService;
+
+@Controller
+public class RegistrationController {
+	@Autowired
+	RegistrationService registrationService;
+@GetMapping("/Sathya")
+public String getform() {
+	return "Reg";
+}
+@PostMapping("save") 
+public String sendData(RegistrationModel registrationModel) {
+	registrationService.savedData(registrationModel);
+	return "success";
+}
+//read all the data
+//Read all the data 
+@GetMapping("/getallRegistereddetails")
+public String getAllRegistration(Model model)
+{
+	List<RegistrationEntity> registrations = registrationService.getAllRegisters();
+	 model.addAttribute("registrations", registrations);
+	return "registrationList";
+	// Ensure this matches your HTML file name without the extension } }
+}
+}*/
+package com.sathya.springboot.project3.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.sathya.springboot.project3.entity.RegistrationEntity;
+import com.sathya.springboot.project3.model.RegistrationModel;
+import com.sathya.springboot.project3.service.RegistrationService;
+
+@Controller
+public class RegistrationController {
+    @Autowired
+    RegistrationService registrationService;
+
+    @GetMapping("/Sathya")
+    public String getForm() {
+        return "Reg";
+    }
+
+    @PostMapping("save")
+    public String sendData(RegistrationModel registrationModel) {
+        registrationService.savedData(registrationModel);
+        return "success";
+    }
+
+    @GetMapping("/getallRegistereddetails")
+    public String getAllRegistration(Model model) {
+        List<RegistrationEntity> registrations = registrationService.getAllRegisters();
+        model.addAttribute("registrations", registrations);
+        return "registrationList";
+    }
+}
+

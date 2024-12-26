@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .details-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        .details-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .details-container .detail-item {
+            margin: 10px 0;
+        }
+        .details-container .detail-item span {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="details-container">
+        <h2>Registration Details</h2>
+        <div class="detail-item"><span>ID:</span> <span th:text="${registration.id}"></span></div>
+        <div class="detail-item"><span>Name:</span> <span th:text="${registration.name}"></span></div>
+        <div class="detail-item"><span>Password:</span> <span th:text="${registration.password}"></span></div>
+        <div class="detail-item"><span>Contact Number:</span> <span th:text="${registration.mobilenumber}"></span></div>
+        <div class="detail-item"><span>Gender:</span> <span th:text="${registration.gender}"></span></div>
+        <div class="detail-item"><span>State:</span> <span th:text="${registration.state}"></span></div>
+        <div class="detail-item"><span>Qualification:</span> <span th:text="${registration.qualification}"></span></div>
+        <div class="detail-item"><span>Address:</span> <span th:text="${registration.address}"></span></div>
+    </div>
+</body>
+</html>

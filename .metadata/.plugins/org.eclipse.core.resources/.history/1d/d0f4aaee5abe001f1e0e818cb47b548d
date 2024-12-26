@@ -1,0 +1,19 @@
+package com.sathya.springboot.project1.entity;
+
+public class EmployeeEntity {
+	private String name;
+	private String email;
+	private long mobilenumber;
+	private String department;
+	private String jobtitle;
+	private double salary;
+	private String gender;
+	private String address;
+	private int experience;
+	private String dateofjoining;
+	private String IncMonth;
+	private double bonus;
+	private double tax;
+	private double pf;
+	private double incentives;
+}

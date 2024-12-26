@@ -1,0 +1,5 @@
+package com.sathya.springboot.project3.controller;
+
+public class RegistrationController {
+
+}

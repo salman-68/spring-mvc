@@ -1,0 +1,27 @@
+package com.sathya.springboot.project1.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import com.sathya.springboot.project1.model.EmployeeModel;
+import com.sathya.springboot.project1.repo.EmployeeRepository;
+@Service
+public class EmployeeService {
+@Autowired
+EmployeeRepository employeeRepository;	
+public void savedData(EmployeeModel employeeModel) {
+	double tax;
+	tax=employeeModel.getBsalary()*0.20;
+	double bonus;
+	bonus=employeeModel.getBsalary()*0.25;
+	double pf;
+	pf=employeeModel.getBsalary()*0.12;
+	double incentives;
+	incentives=employeeModel.getBsalary()*0.1;
+	double totalsalary;
+	totalsalary=employeeModel.getBsalary()+pf+incentives-tax;
+	
+	
+}
+}
+
+

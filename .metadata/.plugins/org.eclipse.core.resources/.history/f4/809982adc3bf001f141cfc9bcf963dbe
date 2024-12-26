@@ -1,0 +1,27 @@
+package com.sathya.springboot.project3.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.sathya.springboot.project3.entity.RegistrationEnitity;
+import com.sathya.springboot.project3.model.RegistrationModel;
+import com.sathya.springboot.project3.repository.RegistrationRepository;
+
+@Service
+public class RegistrationService {
+@Autowired
+RegistrationRepository registrationRepository;
+public void savedData(RegistrationModel registrationModel) {
+	RegistrationEnitity registrationEnitity=new RegistrationEnitity();
+	registrationEnitity.setName(registrationModel.getName());
+	registrationEnitity.setPassword(registrationModel.getPassword());
+	registrationEnitity.setAddress(registrationModel.getAddress());
+	registrationEnitity.setGender(registrationModel.getGender());
+	registrationEnitity.setHobbies(registrationModel.getHobbies());
+	registrationEnitity.setMobilenumber(registrationModel.getMobilenumber());
+	registrationEnitity.setQualification(registrationModel.getQualification());
+	registrationEnitity.setState(registrationModel.getState());
+	
+	
+}
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <style>
+        .div1 {
+            height: 80px;
+            background-color: rgb(55, 214, 214);
+        }
+        .div2 {
+            height: 500px;
+            background-color: azure;
+        }
+        .div3 {
+            height: 50px;
+            background-color: beige;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    function data() {
+        // Getting input field values
+        var a = document.getElementById("a").value;
+        var b = document.getElementById("b").value;
+        var c = document.getElementById("c").value;
+        var d = document.getElementById("d").value;
+
+        // Validation
+        if (a == "" || b == "" || c == "" || d == "") {
+            alert("All Fields Are Mandatory");
+            return false;
+        } else if (b != c) {
+            alert("Enter Same Password");
+            return false;
+        } else if (d.length != 10) {
+            alert("Please Enter 10 Digits Of Number");
+            return false;
+        } else if (isNaN(d)) {
+            alert("Invalid Number");
+            return false;
+        }
+        return true; // Only if all validations pass
+    }
+</script>
+
+<div class="div1">
+    <h1 align="center">Sathya Technologies Form</h1>
+</div>
+
+<div class="div2">
+    <fieldset width="100px">
+        <legend>User Registration Form</legend>
+        <form onsubmit="return data()" th:action="save" method="post">
+            <table align="center">
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" name="name" placeholder="Enter Name" id="a"></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="password" name="password" placeholder="Enter Password" id="b"> </td>
+                </tr>
+                <tr>
+                    <td>Confirm Password:</td>
+                    <td><input type="password" name="pas" placeholder="Enter Password" id="c"> </td>
+                </tr>
+                <tr>
+                    <td>Contact Number:</td>
+                    <td><input type="text" placeholder="Enter Number" name="mobilenumber" id="d"> </td>
+                </tr>
+                <tr>
+                    <td>Gender:</td>
+                    <td><select name="gender">
+                    <option>--Select--</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Others</option>
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    
+                </tr>
+                <tr>
+                    <td>State:</td>
+                    <td><select name="state">
+                        <option>--Select--</option>
+                        <option value="andhrapradesh">Andhra Pradesh</option>
+                        <option value="telangana">Telangana</option>
+                        <option value="maharashtra">Maharashtra</option>
+                        <option value="tamilnadu">Tamil Nadu</option>
+                        <option value="Gujarat">Gujarat</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Qualification:</td>
+                    <td><select name="qualification" multiple>
+                        <option>--Select--</option>
+                        <option value="ssc">SSC</option>
+                        <option value="inter">Inter</option>
+                        <option value="underg graduation">Under Graduation</option>
+                        <option value="post graduation">Post Graduation</option>
+                    </select></td>
+                </tr>
+                <tr>
+                <td>
+                Hobbies:
+                </td>
+                <td>
+                <input type="text" name="Hobbies">
+                </tr>
+                <tr>
+                    <td>Address:</td>
+                    <td><textarea placeholder="Enter Address" name="address"></textarea></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Register" ></td>
+                    <td><input type="reset" value="Clear"></td>
+                </tr>
+            </table>
+        </form>
+    </fieldset>
+</div>
+
+<div class="div3">@Copyright2018-sathya</div>
+
+</body>
+</html>

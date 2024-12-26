@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="lombok.Builder"/>
+    <fullyQualifiedTypeName name="com.sathya.SpringBoot2.example.ProductModel"/>
+    <fullyQualifiedTypeName name="com.sathya.SpringBoot2.model.ProductModel"/>
+    <fullyQualifiedTypeName name="com.sathya.SpringBoo3.Product.ProductModel"/>
+    <fullyQualifiedTypeName name="com.sathya.SpringBoo3.ProductProject.productmodel.ProductModel"/>
+    <fullyQualifiedTypeName name="jakarta.websocket.server.ServerEndpoint"/>
+    <fullyQualifiedTypeName name="com.sathya.SpringBoo3.ProductProject.productentity.ProductEntity"/>
+    <fullyQualifiedTypeName name="com.sathya.SpringBoo3.ProductProject.repository.ProductRepository"/>
+    <fullyQualifiedTypeName name="com.sathya.SpringBoo3.ProductProject.service.ProductService"/>
+    <fullyQualifiedTypeName name="org.springframework.data.annotation.Id"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Column"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+    <fullyQualifiedTypeName name="com.sathya.springboot.project1.repo.EmployeeRepository"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="com.sathya.springboot.project1.service.EmployeeService"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
+    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Id"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.GeneratedValue"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Entity"/>
+    <fullyQualifiedTypeName name="lombok.Data"/>
+    <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
+    <fullyQualifiedTypeName name="lombok.NoArgsConstructor"/>
+    <fullyQualifiedTypeName name="com.sathya.springboot.project1.entity.EmployeeEntity"/>
+    <fullyQualifiedTypeName name="com.sathya.springboot.project1.model.EmployeeModel"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Table"/>
+    <fullyQualifiedTypeName name="ch.qos.logback.core.model.Model"/>
+    <fullyQualifiedTypeName name="com.sathya.springboot.project3.service.RegistrationService"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
+    <fullyQualifiedTypeName name="com.sathya.springboot.project3.entity.RegistrationEntity"/>
+    <fullyQualifiedTypeName name="com.sathya.springboot.project3.repository.RegistrationRepository"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
+</qualifiedTypeNameHistroy>
